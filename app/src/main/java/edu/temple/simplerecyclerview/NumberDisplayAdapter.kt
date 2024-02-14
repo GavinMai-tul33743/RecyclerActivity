@@ -16,6 +16,8 @@ class NumberDisplayAdapter(_numbers:Array<Int>) : RecyclerView.Adapter<NumberDis
     //Step 3b: Complete function definitions for adapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
         TODO("Not yet implemented")
+        return NumberViewHolder(TextView(parent.context).apply {
+            layoutParams = ViewGroup.LayoutParams(300, 300)})
 
     }
 
