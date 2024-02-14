@@ -15,20 +15,22 @@ class NumberDisplayAdapter(_numbers:Array<Int>) : RecyclerView.Adapter<NumberDis
 
     //Step 3b: Complete function definitions for adapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
-        TODO("Not yet implemented")
-        return NumberViewHolder(TextView(parent.context).apply {
-            layoutParams = ViewGroup.LayoutParams(300, 300)})
+        return NumberViewHolder(
+            TextView(parent.context)
+                .apply {
+            layoutParams = ViewGroup.LayoutParams(300, 300)
+                }
+        )
 
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
-        TODO("Not yet implemented")
-        holder.numView.setText(numbers[position])
+        holder.numView.textSize = 50f
+        holder.numView.text = numbers[position].toString()
 
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
         return numbers.size
     }
 
